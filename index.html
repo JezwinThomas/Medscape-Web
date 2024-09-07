@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MedScape Web</title>
+    <title>Home</title>
     <meta charset="UTF-8"/>
     <meta name="author" content="jeswin"/>
     <meta name="description" content="online pharmaceutical website"/>
@@ -11,34 +11,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="screen">
-            <div class="screen__content">
-                <div class="logo">
-                    <img src="logo/MedScape logo.png" alt="Logo" draggable="false" ondragstart="return false">
-                </div>
-                <form class="login">
-                    <div class="login__field">
-                        <i class="login__icon fas fa-user fa-sm"></i>
-                        <input type="text" class="login__input" name="username" placeholder="User Name/Email">
+    <div class="container"> 
+        <div class="box">
+            <div class="box-left">
+                <img src="logo/login_screen_image.png" alt="Login Image">
+            </div>
+            <div class="box-right">
+                <h2 class="login-heading">Login.</h2>
+                <form class="login-form">
+                    <div class="login-field">
+                        <input type="text" name="username" placeholder="User Name">
                     </div>
-                    <div class="login__field">
-                        <i class="login__icon fas fa-lock fa-sm"></i>
-                        <input type="password" class="login__input" name="password" placeholder="Password">
+                    <div class="login-field">
+                        <input type="password" name="password" placeholder="Password">
                     </div>
-                    <button type="button" class="button login__submit">
-                        <span class="button__text">Log In</span>
-                    </button>				
+                    <button type="submit" class="button-login-submit">
+                        <span class="button-text">Log in</span>
+                    </button>
+                    <div class="forgot-password-field">
+                        <a href="#" class="forgot-password-field-text">Forgot Username or Password?</a>
+                    </div>
+                    <div class="signup-text">
+                        <p>Don't have an account? <a href="#" class="signup-text-link">Sign up</a></p>
+                    </div>
                 </form>
             </div>
-            <div class="screen__background">
-                <span class="screen__background__shape screen__background__shape4"></span>
-                <span class="screen__background__shape screen__background__shape3"></span>		
-                <span class="screen__background__shape screen__background__shape2"></span>
-                <span class="screen__background__shape screen__background__shape1"></span>
-            </div>		
         </div>
     </div>
-    <script src="js/scripts.js"></script>
 </body>
-</html>
+</html>    
