@@ -22,9 +22,9 @@ body {
     display: flex;
     background-color: rgb(255, 255, 255);
     position: fixed;
-	height: 490px;
+	height: 520px;
     width: 100%;
-	max-width: 600px;
+	max-width: 650px;
 	box-shadow: 10px 10px 24px 8px #4a4a4a77;
     overflow: hidden;
 }
@@ -72,7 +72,12 @@ body {
     border-bottom: 1px solid #000000;
     font-size: 11px;
     color: #000000;
+	outline: none;
 }
+
+.login-field input:-webkit-autofill{
+	-webkit-box-shadow: 0 0 0px 1000px white inset;
+}	
 
 .button-login-submit {
     background-color: #A826A2;
@@ -82,12 +87,29 @@ body {
     padding-left: 82px;
     padding-right: 82px;
     margin-top: 1px;
+	transition: transform 0.2s ease;
+}
+
+.button-login-submit:hover {
+	transform: translateY(-1px)
+	scale(1.01);
+	background-color: #d331cb;
+	box-shadow: 3px 3px 9px 1px #00000027;
 }
 
 .button-text{
     color: #ffffff;
     font-size: 10px;
 }
+ 
+.button-login-submit:active {
+	background-color: #d043c9;
+}	
+
+.button-login-submit:hover .button-text {
+	color: #fff5fe;
+}	
+
 .forgot-password-field {
     padding-top: 5x;
     padding-bottom: 20px;
@@ -95,14 +117,18 @@ body {
     text-decoration: underline;
 }
 
-.forgot-password-field-text {
+.forgot-password-field a {
     color: #000000;
 }
 
+.forgot-password-field a:hover {
+    color: #a00973;
+}
+
 .signup-text {
-    padding: 7px;
-    padding-left: 28px;
-    padding-right: 25px;
+    padding: 6px;
+    padding-left: 32px;
+    padding-right: 32px;
     border: 1px solid #000000;
     border-radius: 8px;
     font-size: 9px;
@@ -110,8 +136,13 @@ body {
     margin-top: 16px;
 }
 
-.signup-text-link {
+
+.signup-text a {
     font-weight: bold;
     text-decoration-line: none;
     color: #6524EF;
+}
+
+.signup-text a:hover {
+    color: #d46ea0;
 }
