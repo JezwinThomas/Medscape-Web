@@ -8,8 +8,25 @@
 }
 
 body {
-    background-color: #F09DED;
+    background: linear-gradient(90deg,#e46bb7, #656ccc, #9d5df1, #e46bb7);
+	animation: gradientAnimation 13s ease-in-out infinite;
+	background-size: 500% 300%;
+	height: 100vh;
+    margin: 0;
 }
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 60%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 .container {
     display: flex;
@@ -25,7 +42,7 @@ body {
 	height: 520px;
     width: 100%;
 	max-width: 650px;
-	box-shadow: 10px 10px 24px 8px #4a4a4a77;
+	box-shadow: 10px 10px 24px 8px #00000064;
     overflow: hidden;
 }
 
@@ -80,7 +97,7 @@ body {
 }	
 
 .button-login-submit {
-    background-color: #A826A2;
+    background-color: #b428ad;
     border: 0px;
     border-radius: 5px;
     padding: 3px;
@@ -111,18 +128,35 @@ body {
 }	
 
 .forgot-password-field {
-    padding-top: 5x;
+    padding-top: 3px;
     padding-bottom: 20px;
     font-size: 9px;
-    text-decoration: underline;
+	
 }
 
 .forgot-password-field a {
     color: #000000;
+	text-decoration: none;
+	position: relative;
+}
+
+.forgot-password-field a::after {
+    content: '';
+	position: absolute;
+	width: 0;
+	height: 1px;
+	bottom: -1px;
+	left: 0;
+	background-color: #a009736c;
+	transition: width 0.2s ease-in-out;
 }
 
 .forgot-password-field a:hover {
     color: #a00973;
+}
+
+.forgot-password-field a:hover::after {
+    width: 100%;
 }
 
 .signup-text {
@@ -141,8 +175,9 @@ body {
     font-weight: bold;
     text-decoration-line: none;
     color: #6524EF;
+	transition: color 3ms ease;
 }
 
 .signup-text a:hover {
-    color: #d46ea0;
+    color: #911151;
 }
