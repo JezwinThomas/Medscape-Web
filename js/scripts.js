@@ -4,7 +4,6 @@ function handleLogin()
     const username = document.querySelector('input[name="username"]').value;
     const password = document.querySelector('input[name="password"]').value;
 
-
     const predefinedUsername = "admin";    
     const predefinedPassword = "1234";
 
@@ -15,11 +14,12 @@ function handleLogin()
     }
 }
 
-document.querySelector('.login__submit').addEventListener('click', function(event) {
+document.querySelector('.button-login-submit').addEventListener('click', function(event) {
     event.preventDefault();
     handleLogin();
 });
-document.querySelector('.login').addEventListener('keydown', function(event) {
+
+document.addEventListener('keydown', function(event) {
     if (event.key === "Enter")
     {    
         event.preventDefault();
